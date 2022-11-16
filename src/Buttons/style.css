@@ -1,0 +1,34 @@
+.tasksList__buttons {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 10px;
+ 
+}
+
+@media (max-width: 767px) {
+  .tasksList__buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+.tasksList__button {
+  color: hsl(180, 100%, 25%);
+  border: none;
+  transition: 0.3s;
+  background: transparent;
+}
+
+.tasksList__button:hover {
+  color: hsl(180, 100%, 35%);
+}
+
+.tasksList__button:active {
+  color: hsl(180, 100%, 55%);
+}
+
+.tasksList__button:disabled {
+  color: rgb(204, 204, 204);
+}
