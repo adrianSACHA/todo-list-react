@@ -26,7 +26,7 @@ function App() {
                 <h2 className="tasksList__header">
                     Lista zadań
                 </h2>
-                <div className="tasksList__doneButtons">
+                <div className="tasksList__buttons">
                 </div>
             </div>
             <Tasks tasks={tasks} hideDoneTasks={hideDoneTasks} />
