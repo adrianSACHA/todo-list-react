@@ -13,7 +13,7 @@ const Tasks = (props) => (
           {task.done ? "✔" : ""}
         </button>
         <span
-          className={`tasks__content${
+          className={`tasks__content ${
             task.done ? "tasks__content--done" : ""
           }`}
         >
