@@ -1,4 +1,4 @@
-#ToDo-List wit React.js
+# ToDo-List wit React.js
 
 ![To-Do List with REACT](toDoListReact.png)
 
