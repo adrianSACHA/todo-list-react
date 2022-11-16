@@ -37,9 +37,3 @@
   margin: 0;
   font-size: 20px;
 }
-
-@media (max-width: 767px) {
-  .tasksList__header {
-    border-bottom: 1px solid #ddd;
-  }
-}
