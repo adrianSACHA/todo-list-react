@@ -2,6 +2,8 @@ import Form from "./Form";
 import Tasks from "./Tasks";
 import Buttons from "./Buttons";
 import Section from "./Section";
+import Header from "./Header";
+import Containder from "./Container"
 
 const tasks = [
   { id: 1, content: "przejść na REACT", done: false },
@@ -13,11 +15,14 @@ const hideDoneTasks = false;
 function App() {
   return (
     <main className="container">
-      <header>
-        <h1 className="container__header">Lista zadań</h1>
-      </header>
+      <Header 
+      title="Lista zadań" 
+      />
 
-      <Section title="Dodaj nowe zadanie" body={<Form />} />
+      <Section 
+      title="Dodaj nowe zadanie" 
+      body={<Form />} 
+      />
 
       <Section
         title="Lista zadań"
