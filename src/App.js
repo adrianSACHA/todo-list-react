@@ -3,7 +3,7 @@ import Tasks from "./Tasks";
 import Buttons from "./Buttons";
 import Section from "./Section";
 import Header from "./Header";
-import Containder from "./Container"
+import Container from "./Container"
 
 const tasks = [
   { id: 1, content: "przejść na REACT", done: false },
@@ -14,7 +14,7 @@ const hideDoneTasks = false;
 
 function App() {
   return (
-    <main className="container">
+    <Container className="container">
       <Header 
       title="Lista zadań" 
       />
@@ -32,7 +32,7 @@ function App() {
           <Buttons tasks={tasks} hideDoneTasks={hideDoneTasks} />
         }
       />
-    </main>
+    </ Container>
   );
 }
 
