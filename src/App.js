@@ -1,6 +1,7 @@
 import Form from "./Form";
 import Tasks from "./Tasks";
 
+
 const tasks = [
   {id: 1, content: "przejść na REACT", done: false }, 
   {id: 2, content: "zjeść obiad", done: true },
@@ -26,12 +27,6 @@ function App() {
                     Lista zadań
                 </h2>
                 <div className="tasksList__doneButtons">
-                    <div className="tasksList__doneButton">
-                        Ukryj ukończone
-                    </div>
-                    <div className="tasksList__doneButton">
-                        Ukończ wszystkie
-                    </div>
                 </div>
             </div>
             <Tasks tasks={tasks} hideDoneTasks={hideDoneTasks} />
