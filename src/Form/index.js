@@ -4,7 +4,6 @@ const Form = () => (
   <form className="js-form form">
     <input
       className="form__input"
-      autofocus
       placeholder="Co jest do zrobienia?"
       type="text"
     />
