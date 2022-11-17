@@ -12,7 +12,7 @@
 https://adriansacha.github.io/todo-list-react/
 
 ## 👀 PREVIEW
-![ToDo-List React Demo](Public/toDoListReact.gif)
+![ToDo-List React Demo](public/toDoListReact.gif)
 
 ## 📒 Description
 _UnderConstruction - For Now!!_
