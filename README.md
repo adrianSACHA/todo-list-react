@@ -1,16 +1,22 @@
-# ToDo-List wit React.js
+# ToDo-List with React.js
 
 ![To-Do List with REACT](toDoListReact.png)
 
 ## Table of content
 1. Demo
+1. Preview
 1. Description
 1. Getting started
 
 ## DEMO
 https://adriansacha.github.io/todo-list-react/
 
+## 👀 PREVIEW
+![ToDo-List React Demo](Public/toDoListReact.gif)
+
 ## 📒 Description
+_UnderConstruction - For Now!!_
+
 Simple To-Do list application using Create React App. 
 Add new task to do and then hit green check box if it's done. 
 Trash when you done it.
