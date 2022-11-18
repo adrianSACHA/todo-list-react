@@ -16,14 +16,9 @@ https://adriansacha.github.io/todo-list-react/
 ![ToDo-List React Demo](public/toDoListReact.gif)
 
 ## 📒 Description
-_UnderConstruction - For Now!!_
-
 Simple To-Do list application using Create React App. 
 Add new task to do and then hit green check box if it's done. 
 Trash when you done it.
-
-## 👀 Preview
-![TO DO List DEMO](images/toDoList.gif)
 
 ## 💻 Technologies
 * HTML
