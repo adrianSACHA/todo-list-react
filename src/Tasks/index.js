@@ -5,7 +5,7 @@ const Tasks = ({tasks, hideDone}) => (
     {tasks.map((task) => (
       <li
         key={task.id}
-        className={`tasks__item${
+        className={`tasks__item ${
           task.done && hideDone ? "tasks__item--hidden" : ""
         }`}
       >
