@@ -9,9 +9,9 @@ const Tasks = ({ tasks, hideDone, removeTask, toggleTaskDone }) => (
           task.done && hideDone ? "tasks__item--hidden" : ""
         }`}
       >
-        <button 
-        className="tasks__button tasks__button--toggleDone"
-        onClick={() => toggleTaskDone(task.id)}
+        <button
+          className="tasks__button tasks__button--toggleDone"
+          onClick={() => toggleTaskDone(task.id)}
         >
           {task.done ? "✔" : ""}
         </button>
@@ -22,10 +22,12 @@ const Tasks = ({ tasks, hideDone, removeTask, toggleTaskDone }) => (
         >
           {task.content}
         </span>
-        <button 
-        className="tasks__button tasks__button--remove"
-        onClick={() => removeTask(task.id)}
-        >🗑️</button>
+        <button
+          className="tasks__button tasks__button--remove"
+          onClick={() => removeTask(task.id)}
+        >
+          🗑️
+        </button>
       </li>
     ))}
   </ul>
