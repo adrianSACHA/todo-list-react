@@ -1,6 +1,6 @@
 # ToDo-List with React.js
 
-![To-Do List with REACT](toDoListReact.png)
+![To-Do List with REACT](public/toDoListReact.png)
 
 ## Table of content
 1. Demo ✅
