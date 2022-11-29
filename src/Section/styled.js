@@ -1,39 +1,32 @@
-.section {
+import styled from "styled-components";
+
+export const Sections = styled.section`
   background-color: white;
   margin: 10px auto;
   padding: 10px 20px;
   box-shadow: 0 0 5px #ddd;
-}
+`;
 
-.section__header {
-  padding: 20px;
-  border-bottom: 1px solid #ddd;
-  margin: 0;
-  font-size: 20px;
-}
-
-.section__body {
-  padding: 20px;
-}
-
-.tasksList {
+export const TasksList = styled.header`
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-content: center;
   align-items: center;
   border-bottom: 1px solid #ddd;
   margin-bottom: 10px;
-}
 
-@media (max-width: 767px) {
-  .tasksList {
+  @media (max-width: 767px) {
     grid-template-columns: 1fr;
     align-items: stretch;
   }
-}
+`;
 
-.tasksList__header {
+export const TasksListHeader = styled.h2`
   padding: 20px 0px;
   margin: 0;
   font-size: 20px;
-}
+`;
+
+export const TasksListBody = styled.div`
+  padding: 20px;
+`;
