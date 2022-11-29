@@ -1,0 +1,34 @@
+import styled from "styled-components";
+
+export const FormMain = styled.form`
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-gap: 20px;
+
+  @media (max-width: 767px) {
+    grid-template-columns: 1fr;
+    align-items: stretch;
+  }
+`;
+
+export const Button = styled.button`
+  padding: 10px;
+  background-color: hsl(180, 100%, 25%);
+  color: white;
+  border: none;
+  transition: 1s;
+
+  &:hover {
+    background-color: hsl(180, 100%, 30%);
+    transform: scale(1.1);
+  }
+
+  &:active {
+    background-color: hsl(180, 100%, 35%);
+  }
+`;
+
+export const Input = styled.input`
+  padding: 10px;
+  border: 1px solid #ddd;
+`;
