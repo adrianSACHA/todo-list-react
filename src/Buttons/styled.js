@@ -6,27 +6,27 @@ export const StyledButtons = styled.div`
   flex-direction: row;
   justify-content: flex-end;
   padding: 10px;
+
+  @media (max-width: ${({ theme }) => theme.breakPoint.mobile}px) {
+    flex-direction: column;
+    align-items: stretch;
+  }
 `;
 
 export const Button = styled.button`
-  color: hsl(180, 100%, 25%);
+  color: ${({ theme }) => theme.color.teal};
   border: none;
   transition: 0.3s;
   background: transparent;
 
-  @media (max-width: 767px) {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
   &:hover {
-    color: hsl(180, 100%, 35%);
+    color: ${({ theme }) => theme.color.bondiBlue};
   }
   &:active {
-    color: hsl(180, 100%, 55%);
+    color: ${({ theme }) => theme.color.cyan};
   }
 
   &:disabled {
-    color: rgb(204, 204, 204);
+    color: ${({ theme }) => theme.color.silver};
   }
 `;
