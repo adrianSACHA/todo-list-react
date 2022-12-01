@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Sections = styled.section`
-  background-color: white;
+  background-color: ${({ theme }) => theme.color.white};
   margin: 10px auto;
   padding: 10px 20px;
   box-shadow: 0 0 5px #ddd;
@@ -15,7 +15,7 @@ export const TasksList = styled.header`
   border-bottom: 1px solid #ddd;
   margin-bottom: 10px;
 
-  @media (max-width: 767px) {
+  @media (max-width: ${({ theme }) => theme.breakPoint.mobile}px) {
     grid-template-columns: 1fr;
     align-items: stretch;
   }
