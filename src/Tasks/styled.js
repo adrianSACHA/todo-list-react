@@ -32,21 +32,21 @@ export const Button = styled.button`
   transition: 0.3s;
 
   ${({ toggleDone }) => toggleDone && css`
-      background-color: hsl(120, 100%, 25%);
-      color: white;
+      background-color: ${({ theme }) => theme.color.japaneseLaurel};
+      color: ${({ theme }) => theme.color.white};
       margin-right: 10px;
 
       &:hover {
-        background-color: hsl(120, 100%, 30%);
+        background-color: ${({ theme }) => theme.color.japaneseLaurelLight};
       }
     `}
 
   ${({ remove }) => remove && css`
-      background-color: hsl(0, 100%, 50%);
+      background-color: ${({ theme }) => theme.color.red};
       padding: 0px 3px 0px 4px;
    
       &:hover {
-        background-color: hsl(0, 100%, 60%);
+        background-color: ${({ theme }) => theme.color.redOrange};
       }
    `}
 `;
