@@ -7,7 +7,7 @@ export const Sections = styled.section`
   box-shadow: 0 0 5px #ddd;
 `;
 
-export const TasksList = styled.header`
+export const List = styled.header`
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-content: center;
@@ -21,12 +21,12 @@ export const TasksList = styled.header`
   }
 `;
 
-export const TasksListHeader = styled.h2`
+export const Header = styled.h2`
   padding: 20px 0px;
   margin: 0;
   font-size: 20px;
 `;
 
-export const TasksListBody = styled.div`
+export const Content = styled.div`
   padding: 20px;
 `;

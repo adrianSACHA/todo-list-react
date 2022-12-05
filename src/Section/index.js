@@ -1,12 +1,12 @@
-import { Sections, TasksList, TasksListHeader, TasksListBody } from "./styled";
+import { Sections, List, Header, Content } from "./styled";
 
 const Section = ({ title, body, extraHeaderContent }) => (
   <Sections>
-    <TasksList>
-      <TasksListHeader>{title}</TasksListHeader>
+    <List>
+      <Header>{title}</Header>
       {extraHeaderContent}
-    </TasksList>
-    <TasksListBody>{body}</TasksListBody>
+    </List>
+    <Content>{body}</Content>
   </Sections>
 );
 
