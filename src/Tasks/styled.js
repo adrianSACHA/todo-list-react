@@ -25,28 +25,29 @@ export const Content = styled.span`
     `}
 `;
 
-export const Button = styled.button`
+const Button = styled.button`
   height: 30px;
   width: 30px;
   border: none;
   transition: 0.3s;
+`;
 
-  ${({ toggleDone }) => toggleDone && css`
-      background-color: ${({ theme }) => theme.color.japaneseLaurel};
+export const ToggleDoneButton = styled(Button)`
+background-color: ${({ theme }) => theme.color.japaneseLaurel};
       color: ${({ theme }) => theme.color.white};
       margin-right: 10px;
 
       &:hover {
         background-color: ${({ theme }) => theme.color.japaneseLaurelLight};
       }
-    `}
+    `;
 
-  ${({ remove }) => remove && css`
-      background-color: ${({ theme }) => theme.color.red};
+export const RemoveButton = styled(Button)`
+ background-color: ${({ theme }) => theme.color.red};
       padding: 0px 3px 0px 4px;
    
       &:hover {
         background-color: ${({ theme }) => theme.color.redOrange};
       }
-   `}
 `;
+
