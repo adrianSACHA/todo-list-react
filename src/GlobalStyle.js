@@ -17,5 +17,6 @@ export const GlobalStyle = createGlobalStyle`
     color: ${({theme}) => theme.color.black};
     background-color: ${({theme}) => theme.color.gallery};
     word-break: break-word;
+    min-height: 100vh;
   }
 `;
