@@ -1,11 +1,10 @@
+import { Container } from "./Container/styled";
 import Form from "./Form";
 import Tasks from "./Tasks";
 import Buttons from "./Buttons";
 import Section from "./Section";
 import Header from "./Header";
-import Container from "./Container";
 import useTasks from "./useTasks";
-
 
 function App() {
   const {
@@ -17,7 +16,7 @@ function App() {
     toggleTaskDone,
     removeTask,
   } = useTasks();
-  
+
   return (
     <Container>
       <Header title="Lista zadań" />
