@@ -1,17 +1,13 @@
 import { useState, useEffect } from "react";
 
 const useTasks = () => {
-  const getLocalStorageTasks = () => {
-    const localStorageTasks = localStorage.getItem("tasks");
-    return localStorageTasks ? JSON.parse(localStorageTasks) : [];
-  };
+  const getDataFromLocalStorage = (dataName, defaultValue) =>
+    JSON.parse(localStorage.getItem(dataName)) || defaultValue;
 
-  const getLocalStorageHideDone = () => {
-    const localStorageHideDone = localStorage.getItem("hideDone");
-    return localStorageHideDone ? JSON.parse(localStorageHideDone) : [];
-  };
+  const [hideDone, setHideDone] = useState(
+    getDataFromLocalStorage("hideDone", false)
+  );
 
-  const [hideDone, setHideDone] = useState(getLocalStorageHideDone);
   const toggleHideDone = () => {
     setHideDone((hideDone) => !hideDone);
   };
@@ -20,26 +16,26 @@ const useTasks = () => {
     localStorage.setItem("hideDone", JSON.stringify(hideDone));
   }, [hideDone]);
 
-  const [tasks, setTasks] = useState(getLocalStorageTasks);
+  const [tasks, setTasks] = useState(getDataFromLocalStorage("tasks", []));
 
   useEffect(() => {
     localStorage.setItem("tasks", JSON.stringify(tasks));
   }, [tasks]);
 
-    const removeTask = (id) => {
-    setTasks(tasks => tasks.filter(task => task.id !== id));
+  const removeTask = (id) => {
+    setTasks((tasks) => tasks.filter((task) => task.id !== id));
   };
 
   const toggleTaskDone = (id) =>
-    setTasks(tasks =>
-      tasks.map(task =>
+    setTasks((tasks) =>
+      tasks.map((task) =>
         task.id === id ? { ...task, done: !task.done } : task
       )
     );
 
   const setAllDone = () => {
-    setTasks(tasks =>
-      tasks.map(task => ({
+    setTasks((tasks) =>
+      tasks.map((task) => ({
         ...task,
         done: true,
       }))
@@ -47,7 +43,7 @@ const useTasks = () => {
   };
 
   const addNewTask = (content) => {
-    setTasks(tasks => [
+    setTasks((tasks) => [
       ...tasks,
       {
         content,
@@ -56,7 +52,7 @@ const useTasks = () => {
       },
     ]);
   };
-  return ({
+  return {
     tasks,
     hideDone,
     setAllDone,
@@ -64,7 +60,7 @@ const useTasks = () => {
     toggleHideDone,
     toggleTaskDone,
     removeTask,
-  });
+  };
 };
 
 export default useTasks;
