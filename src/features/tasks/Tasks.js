@@ -12,7 +12,7 @@ function Tasks() {
   const { tasks } = useSelector(selectTasks);
 
   const {
-    hideDone,
+    // hideDone,
     // tasks,
     setAllDone,
     addNewTask,
@@ -33,7 +33,7 @@ function Tasks() {
         body={
           <TaskList
             tasks={tasks}
-            hideDone={hideDone}
+            // hideDone={hideDone}
             removeTask={removeTask}
             toggleTaskDone={toggleTaskDone}
           />
@@ -41,8 +41,8 @@ function Tasks() {
         extraHeaderContent={
           <Buttons
             tasks={tasks}
-            hideDone={hideDone}
-            toggleHideDone={toggleHideDone}
+            // hideDone={hideDone}
+            // toggleHideDone={toggleHideDone}
             setAllDone={setAllDone}
           />
         }
