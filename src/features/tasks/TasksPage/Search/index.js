@@ -3,12 +3,11 @@ import { useHistory, useLocation } from "react-router-dom";
 import Input from "../../Input";
 import { Wrapper } from "./styled";
 
-
 const Function = () => {
   const location = useLocation();
   const history = useHistory();
   const query = new URLSearchParams(location.search).get("szukaj");
- 
+
   const onInputChange = ({ target }) => {
     const searchParams = new URLSearchParams(location.search);
 
@@ -22,11 +21,11 @@ const Function = () => {
 
   return (
     <Wrapper>
-    <Input
-      placeholder="Filtruj zadania"
-      value={query || ""}
-      onChange={onInputChange}
-    />
+      <Input
+        placeholder="Filtruj zadania"
+        value={query || ""}
+        onChange={onInputChange}
+      />
     </Wrapper>
   );
 };
