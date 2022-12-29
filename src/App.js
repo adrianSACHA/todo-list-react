@@ -16,10 +16,10 @@ const App = () => (
         </li>
       </ul>
       <Switch>
-      <Route path="/zadania/:id">
+        <Route path="/zadania/:id">
           <TaskPage />
         </Route>
-       <Route path="/zadania">
+        <Route path="/zadania">
           <TasksPage />
         </Route>
         <Route path="/autor">
