@@ -10,9 +10,6 @@ const Buttons = () => {
   const dispatch = useDispatch();
   return (
     <StyledButtons>
-      <Button onClick={() => dispatch(fetchExampleTasks())}>
-        Pobierz przykładowe zadania
-      </Button>
       {!areTasksEmpty && (
         <>
           <Button 
