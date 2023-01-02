@@ -8,12 +8,13 @@ export const Sections = styled.section`
 
 export const List = styled.header`
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: auto auto;
   align-content: center;
   align-items: center;
   border-bottom: 1px solid #ddd;
   margin-bottom: 10px;
   padding: 5px 5px 5px 20px;
+  justify-content: space-between;
 
   @media (max-width: ${({ theme }) => theme.breakPoint.mobile}px) {
     grid-template-columns: 1fr;
