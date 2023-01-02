@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { Link } from "react-router-dom";
 
 export const List = styled.ul`
   list-style: none;
@@ -14,13 +15,17 @@ export const Item = styled.li`
   grid-gap: 10px;
   padding: 10px;
 
-  ${({ hidden }) => hidden && css`
+  ${({ hidden }) =>
+    hidden &&
+    css`
       display: none;
     `}
 `;
 
 export const Content = styled.span`
-  ${({ done }) => done && css`
+  ${({ done }) =>
+    done &&
+    css`
       text-decoration: line-through;
     `}
 `;
@@ -33,21 +38,28 @@ const Button = styled.button`
 `;
 
 export const ToggleDoneButton = styled(Button)`
-background-color: ${({ theme }) => theme.color.japaneseLaurel};
-      color: ${({ theme }) => theme.color.white};
-      margin-right: 10px;
+  background-color: ${({ theme }) => theme.color.japaneseLaurel};
+  color: ${({ theme }) => theme.color.white};
+  margin-right: 10px;
 
-      &:hover {
-        background-color: ${({ theme }) => theme.color.japaneseLaurelLight};
-      }
-    `;
-
-export const RemoveButton = styled(Button)`
- background-color: ${({ theme }) => theme.color.red};
-      padding: 0px 3px 0px 4px;
-   
-      &:hover {
-        background-color: ${({ theme }) => theme.color.redOrange};
-      }
+  &:hover {
+    background-color: ${({ theme }) => theme.color.japaneseLaurelLight};
+  }
 `;
 
+export const RemoveButton = styled(Button)`
+  background-color: ${({ theme }) => theme.color.red};
+  padding: 0px 3px 0px 4px;
+
+  &:hover {
+    background-color: ${({ theme }) => theme.color.redOrange};
+  }
+`;
+
+export const StyledLink = styled(Link)`
+  color: ${({ theme }) => theme.color.teal};
+  &:hover {
+    transition: 0.5s;
+    color: ${({ theme }) => theme.color.blueLagoon};
+  }
+`;
