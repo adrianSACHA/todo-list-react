@@ -27,9 +27,17 @@ const tasksSlice = createSlice({
         task.done = true;
       });
     },
-    fetchExampleTasks: () => {},
-    setTasks: (state, { payload: tasks }) => {
+    fetchExampleTasks: (state) => {
+      state.loading = true;
+      state.loading = "Ładowanie...";
+    },
+    fetchExampleTasksError: (state) => {
+      state.loading = false;
+      state.error = "Błąd ładowania";
+    },
+    fetchExampleTasksSuccess: (state, {payload: tasks}) => {
       state.tasks = tasks;
+      state.loading = false;
     },
   },
 });
@@ -41,6 +49,8 @@ export const {
   removeTask,
   setAllDone,
   fetchExampleTasks,
+  fetchExampleTasksError,
+  fetchExampleTasksSuccess,
   setTasks,
 } = tasksSlice.actions;
 
@@ -51,19 +61,23 @@ export const selectHideDone = (state) => selectTasksState(state).hideDone;
 export const selectAreTaskEmpty = (state) => selectTasks(state).length === 0;
 export const selectIsEveryTaskDone = (state) =>
   selectTasks(state).every(({ done }) => done);
+export const selectLoading = (state) => selectTasksState(state).loading;
+export const selectError = (state) => selectTasksState(state).error;
+
 
 export const getTaskById = (state, taskId) =>
   selectTasks(state).find(({ id }) => id === taskId);
 
-  export const selectTasksByQuery = (state, query) => {
-    const tasks = selectTasks(state);
+export const selectTasksByQuery = (state, query) => {
+  const tasks = selectTasks(state);
 
-  if(!query || query.trim() === "") {
+  if (!query || query.trim() === "") {
     return tasks;
   }
 
-  return tasks.filter(({content}) => 
-  content.toUpperCase().includes(query.trim().toUpperCase()));
-}
+  return selectTasks(state).filter(({ content }) =>
+    content.toUpperCase().includes(query.trim().toUpperCase())
+  );
+};
 
 export default tasksSlice.reducer;
