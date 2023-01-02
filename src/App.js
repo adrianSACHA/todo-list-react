@@ -3,19 +3,19 @@ import { HashRouter, Link, Switch, Route, Redirect } from "react-router-dom";
 import TasksPage from "./features/tasks/TasksPage";
 import TaskPage from "./features/tasks/TaskPage";
 import AuthorPage from "./features/author/AuthorPage";
-import { StyledNavLink } from "./styled";
+import { List, Nav, StyledNavLink, UnorderedList } from "./styled";
 
 const App = () => (
   <HashRouter basename="/todo-list-react">
-    <nav>
-      <ul>
-        <li>
+    <Nav>
+      <UnorderedList>
+        <List>
           <StyledNavLink to="/zadania">Zadania</StyledNavLink>
-        </li>
-        <li>
+        </List>
+        <List>
           <StyledNavLink to="/autor">O autorze</StyledNavLink>
-        </li>
-      </ul>
+        </List>
+      </UnorderedList>
       <Switch>
         <Route path="/zadania/:id">
           <TaskPage />
@@ -30,7 +30,7 @@ const App = () => (
           <Redirect to="/zadania" />
         </Route>
       </Switch>
-    </nav>
+    </Nav>
   </HashRouter>
 );
 
