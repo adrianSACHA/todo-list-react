@@ -1,1 +1,3 @@
-export default "szukaj";
+const searchQueryParamName = "Filtruj zadania";
+
+export default searchQueryParamName;
