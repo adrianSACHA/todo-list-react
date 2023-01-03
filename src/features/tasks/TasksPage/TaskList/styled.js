@@ -58,8 +58,11 @@ export const RemoveButton = styled(Button)`
 
 export const StyledLink = styled(Link)`
   color: ${({ theme }) => theme.color.teal};
+  text-decoration: none;
+
   &:hover {
     transition: 0.5s;
     color: ${({ theme }) => theme.color.blueLagoon};
+    text-decoration: none;
   }
 `;
