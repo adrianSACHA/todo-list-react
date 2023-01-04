@@ -10,10 +10,10 @@
 1. Getting started
 
 ## DEMO
-https://adriansacha.github.io/todo-list-react/
+[ToDo-List-React Demo](https://adriansacha.github.io/todo-list-react/)
 
 ## PREVIEW
-![ToDo-List React Demo](public/toDoListReact.gif)
+![ToDo-List React Preview](public/toDoListReact.gif)
 
 ## Description
 Simple To-Do list application using Create React App. 
@@ -28,6 +28,7 @@ Trash when you done it.
 * Flex, Grid
 * ES6+ features
 * Create React App
+* Redux JS
 * Babel
 * Webpack
 
