@@ -5,7 +5,7 @@ export const Button = styled.button`
   border: none;
   transition: 0.3s;
   background: transparent;
-  margin: 0 0 0 20px;
+  margin: 0 14px 0 0;
   cursor: pointer;
 
   @media (max-width: ${({ theme }) => theme.breakPoint.mobile}px) {
