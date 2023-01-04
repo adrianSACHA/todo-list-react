@@ -28,11 +28,10 @@ const tasksSlice = createSlice({
       });
     },
     fetchExampleTasks: (state) => {
-      state.loading = "Ładowanie...";
+      state.loading = true;
     },
     fetchExampleTasksError: (state) => {
       state.loading = false;
-      state.error = "Błąd ładowania";
     },
     fetchExampleTasksSuccess: (state, {payload: tasks}) => {
       state.tasks = tasks;
