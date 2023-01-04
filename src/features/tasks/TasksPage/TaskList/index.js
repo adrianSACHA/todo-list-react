@@ -1,4 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
+import { toTask } from "../../../../routes";
 import {
   removeTask,
   selectHideDone,
@@ -7,12 +8,19 @@ import {
 } from "../../tasksSlice";
 import { useQueryParameter } from "../Search/queryParameters";
 import searchQueryParamName from "../searchQueryParamName";
-import { List, Item, Content, RemoveButton, ToggleDoneButton, StyledLink } from "./styled";
+import {
+  List,
+  Item,
+  Content,
+  RemoveButton,
+  ToggleDoneButton,
+  StyledLink,
+} from "./styled";
 
 const TaskList = () => {
   const query = useQueryParameter(searchQueryParamName);
 
-  const tasks = useSelector(state => selectTasksByQuery(state, query));
+  const tasks = useSelector((state) => selectTasksByQuery(state, query));
   const hideDone = useSelector(selectHideDone);
 
   const dispatch = useDispatch();
@@ -25,7 +33,7 @@ const TaskList = () => {
             {task.done ? " ✔" : ""}
           </ToggleDoneButton>
           <Content done={task.done}>
-            <StyledLink to={`/zadania/${task.id}`}>{task.content}</StyledLink>
+            <StyledLink to={toTask({ id: task.id })}>{task.content}</StyledLink>
           </Content>
           <RemoveButton onClick={() => dispatch(removeTask(task.id))}>
             🗑️
