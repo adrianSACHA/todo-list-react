@@ -10,9 +10,9 @@ const Author = () => (
       title="Adrian Sachajdakiewicz"
       body={
         <>
-          <p>
+          <h2>
             <strong>Zainteresowania</strong>
-          </p>
+          </h2>
           <p>Programowanie na poważnie od kilku miesięcy.</p>
           Kiedyś tworzyłem stronę internetową z okładkami do albumów z muzyką.
           Dawało mi to dużo przyjemności.
@@ -22,9 +22,9 @@ const Author = () => (
             Układać razem z synem Lego, ostatnim challengem był X-Wing Luka
             Skywalkera.{" "}
           </p>
-          <p>
+          <h2>
             <strong>Zawodowo</strong>
-          </p>
+          </h2>
           <p>
             Moja przygoda z handlem zaczęła się od Sprzedawcy/Prezentera.
             Przeszedłem całą możliwą ścieżkę jaką według mnie, każdy powinien
