@@ -12,7 +12,7 @@ function ExampleTasks() {
   const error = useSelector(selectError);
 
   return (
-    <Button onClick={() => dispatch(fetchExampleTasks())}>
+    <Button disabled={loading} onClick={() => dispatch(fetchExampleTasks())}>
       {loading ? loading : error ? error : "Pobierz przykładowe zadania"}
     </Button>
   );
