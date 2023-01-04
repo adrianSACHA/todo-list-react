@@ -28,7 +28,6 @@ const tasksSlice = createSlice({
       });
     },
     fetchExampleTasks: (state) => {
-      state.loading = true;
       state.loading = "Ładowanie...";
     },
     fetchExampleTasksError: (state) => {
