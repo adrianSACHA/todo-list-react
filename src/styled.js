@@ -31,6 +31,8 @@ export const StyledNavLink = styled(NavLink)`
   &:hover {
     transform: scale(1.1);
     font-weight: bold;
+    color: ${({ theme }) => theme.color.bondiBlue};
+
   }
 
   &.active {
