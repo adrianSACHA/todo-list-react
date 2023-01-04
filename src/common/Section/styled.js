@@ -30,5 +30,5 @@ export const Header = styled.h2`
 `;
 
 export const Content = styled.div`
-  padding: 20px;
+  padding: 0 20px 15px 20px;
 `;
