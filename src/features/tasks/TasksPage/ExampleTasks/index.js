@@ -9,11 +9,10 @@ import { Button } from "../../../../common/Button/styled";
 function ExampleTasks() {
   const dispatch = useDispatch();
   const loading = useSelector(selectLoading);
-  const error = useSelector(selectError);
 
   return (
     <Button disabled={loading} onClick={() => dispatch(fetchExampleTasks())}>
-      {loading ? loading : error ? error : "Pobierz przykładowe zadania"}
+      {loading ? "Ładowanie..." : "Pobierz przykładowe zadania"}
     </Button>
   );
 }
