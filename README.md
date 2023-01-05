@@ -17,6 +17,8 @@
 
 ## Description
 Simple To-Do list application using Create React App. 
+
+You can get example task from async
 Add new task to do and then hit green check box if it's done. 
 Trash when you done it.
 
@@ -28,7 +30,7 @@ Trash when you done it.
 * Flex, Grid
 * ES6+ features
 * Create React App
-* Redux JS
+* Redux Saga, Router, Toolkit
 * Babel
 * Webpack
 
