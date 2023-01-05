@@ -3,7 +3,7 @@ import {
   fetchExampleTasks,
   selectLoading,
 } from "../../tasksSlice";
-import { Button } from "../../../../common/Button/styled";
+import { Button } from "../Button/";
 
 function ExampleTasks() {
   const dispatch = useDispatch();
