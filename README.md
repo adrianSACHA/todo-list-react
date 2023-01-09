@@ -1,6 +1,8 @@
-# ToDo-List with React.js
+# ToDo-List
 
 ![To-Do List with REACT](public/toDoListReact.png)
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Table of content
 1. Demo
@@ -16,27 +18,36 @@
 ![ToDo-List React Preview](public/toDoListReact.gif)
 
 ## Description
-Simple To-Do list application using Create React App. 
 
-You can get example task from async
-Add new task to do and then hit green check box if it's done. 
-Trash when you done it.
+1. In the `Co jest do zrobienia?` input area write down what you want to add to the list
+2. Press the `Dodaj zadanie` button
+3. Your list item is below in `Lista zadań` section
+4. You can mark your list item as done by *left button* (checked icon)
+5. You can delete your list item by *Right button* (trash icon)
+6. You can mark all list items as done by button `Ukończ wszystkie`
+7. You can hide all marked as done items by button `Ukryj zakończone`
+8. You can show all marked as done items by button `Pokaż ukończone`
 
 ## Technologies
-* HTML
-* CSS
-* BEM
-* JavaScript
-* Flex, Grid
-* ES6+ features
-* Create React App
-* Redux Saga, Router, Toolkit
-* Babel
-* Webpack
-
-
-# Getting Started with Create React App
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- HTML
+- BEM
+- CSS
+- Flex
+- Grid
+- Transition
+- Media query
+- Animations
+- JS/ES6+
+- Immiutability
+- Babel
+- React
+- React-Redux
+- React-Router
+- Styled Components
+- useState
+- useEffect
+- useRef
+- GlobalStyles & Theme
 
 ## Available Scripts
 In the project directory, you can run:
@@ -56,12 +67,3 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
