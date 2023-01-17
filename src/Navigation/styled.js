@@ -6,6 +6,8 @@ export const Nav = styled.nav`
   flex-direction: column;
   flex-basis: auto;
   margin: 0 auto;
+  position: sticky;
+  top: 0;
 `;
 
 export const UnorderedList = styled.ul`
